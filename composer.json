@@ -1,0 +1,68 @@
+{
+    "name": "codepreneur/laravel-fathom",
+    "description": "A Laravel SDK for the Fathom AI API.",
+    "keywords": [
+        "laravel",
+        "fathom",
+        "fathom-ai",
+        "sdk",
+        "api",
+        "meetings",
+        "transcription",
+        "webhooks",
+        "ai"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Codepreneur",
+            "homepage": "https://github.com/kodpreneur-dooel"
+        }
+    ],
+    "require": {
+        "php": "^8.2",
+        "illuminate/http": "^11.0|^12.0|^13.0",
+        "illuminate/support": "^11.0|^12.0|^13.0",
+        "nesbot/carbon": "^3.0"
+    },
+    "require-dev": {
+        "larastan/larastan": "^3.0",
+        "laravel/pint": "^1.0",
+        "orchestra/testbench": "^9.0|^10.0|^11.0",
+        "phpunit/phpunit": "^11.5.50|^12.0|^13.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Codepreneur\\Fathom\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Codepreneur\\Fathom\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Codepreneur\\Fathom\\FathomServiceProvider"
+            ],
+            "aliases": {
+                "Fathom": "Codepreneur\\Fathom\\Facades\\Fathom"
+            }
+        }
+    },
+    "scripts": {
+        "test": "phpunit",
+        "lint": "pint --test",
+        "lint:fix": "pint",
+        "analyse": "phpstan analyse --memory-limit=256M"
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
