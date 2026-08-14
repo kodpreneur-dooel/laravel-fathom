@@ -37,7 +37,6 @@ jobs:
 
       - name: Install dependencies
         run: |
-          composer config audit.block false
           composer require "illuminate/support:${{ matrix.laravel }}" "illuminate/http:${{ matrix.laravel }}" --no-update
           composer require "orchestra/testbench:${{ matrix.testbench }}" --dev --no-update
           composer update --prefer-dist --no-interaction
